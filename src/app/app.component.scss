@@ -1,0 +1,17 @@
+.content {
+    min-height: 100vh;
+    background-color: rgba(var(--bs-dark-rgb));
+}
+
+.nav-image {
+    width: 50px;
+    opacity: .5;
+}
+
+.nav-tk {
+    height: 40px;
+}
+
+:host .navbar {
+    --bs-navbar-nav-link-padding-x: 1rem;
+} 
