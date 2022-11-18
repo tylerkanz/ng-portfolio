@@ -5,7 +5,7 @@
 
 .nav-image {
     width: 50px;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .nav-tk {
@@ -14,12 +14,12 @@
 
 :host .navbar {
     --bs-navbar-nav-link-padding-x: 1rem;
-} 
+}
 
 .cursor {
     cursor: pointer;
 }
 
 .text-tertiary {
-    color: #999999
+    color: #999999;
 }
