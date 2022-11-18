@@ -7,10 +7,12 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     pathMatch: 'full',
+    data: { animation: 'Left'}
   },
   {
     path: 'skills',
-    loadChildren: () => import('./skills/skills.module').then(m => m.SkillsModule)
+    loadChildren: () => import('./skills/skills.module').then(m => m.SkillsModule),
+    data: { animation: 'Right'}
   },
 ];
 

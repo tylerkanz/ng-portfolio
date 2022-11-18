@@ -11,26 +11,31 @@ const routes: Routes = [
     path: '',
     component: SkillsComponent,
     pathMatch: 'full',
+    data: { animation: 'Right'}
   },
   {
     path: 'web-apps',
     component: WebAppsComponent,
     pathMatch: 'full',
+    data: { animation: 'Right'}
   },
   {
     path: 'mobile-apps',
     component: MobileAppsComponent,
     pathMatch: 'full',
+    data: { animation: 'Right'}
   },
   {
     path: 'system-architecture',
     component: SystemArchComponent,
     pathMatch: 'full',
+    data: { animation: 'Right'}
   },
   {
     path: 'apis',
     component: ApisComponent,
     pathMatch: 'full',
+    data: { animation: 'Right'}
   },
 ];
 
