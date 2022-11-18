@@ -8,6 +8,10 @@ const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full',
   },
+  {
+    path: 'skills',
+    loadChildren: () => import('./skills/skills.module').then(m => m.SkillsModule)
+  },
 ];
 
 @NgModule({

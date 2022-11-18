@@ -1,9 +1,11 @@
 <div class="content">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <img class="nav-tk" src="assets/svg/tk.svg">
-      <h1 class="mx-3"> + </h1>
-      <img class="nav-image" src="assets/svg/angular.svg">
+      <div class="d-flex align-items-center" [routerLink]="['/']">
+        <img class="nav-tk" src="assets/svg/tk.svg">
+        <h1 class="mx-3"> + </h1>
+        <img class="nav-image" src="assets/svg/angular.svg">
+      </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,16 +24,16 @@
                 <ng-icon size="30px" name="typSocialLinkedin"></ng-icon>
               </a>
             </li>
-            </div>
+          </div>
           <div ngbDropdown class="ms-4 d-inline-block">
             <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
               Skills
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu-dark">
-              <button ngbDropdownItem>Web Apps</button>
-              <button ngbDropdownItem>Mobile Apps</button>
-              <button ngbDropdownItem>APIs</button>
-              <button ngbDropdownItem>System Architecture</button>
+              <button ngbDropdownItem [routerLink]="['/skills/web-apps']">Web Apps</button>
+              <button ngbDropdownItem [routerLink]="['/skills/mobile-apps']">Mobile Apps</button>
+              <button ngbDropdownItem [routerLink]="['/skills/apis']">APIs</button>
+              <button ngbDropdownItem [routerLink]="['/skills/system-architecture']">System Architecture</button>
             </div>
           </div>
         </ul>
