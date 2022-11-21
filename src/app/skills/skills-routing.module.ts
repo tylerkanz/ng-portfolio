@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ApisComponent } from './apis/apis.component';
 import { MobileAppsComponent } from './mobile-apps/mobile-apps.component';
 import { SkillsComponent } from './skills.component';
-import { SystemArchComponent } from './system-arch/system-arch.component';
+import { CloudArchComponent } from './cloud-arch/cloud-arch.component';
 import { WebAppsComponent } from './web-apps/web-apps.component';
 
 const routes: Routes = [
@@ -26,8 +26,8 @@ const routes: Routes = [
     data: { animation: 'Right'}
   },
   {
-    path: 'system-architecture',
-    component: SystemArchComponent,
+    path: 'cloud-architecture',
+    component: CloudArchComponent,
     pathMatch: 'full',
     data: { animation: 'Right'}
   },

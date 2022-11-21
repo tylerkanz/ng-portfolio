@@ -3,6 +3,9 @@
 /* Importing Bootstrap SCSS file. */
 $primary: #9b9d9e;
 $body-color: #c9c9c9;
+$popover-header-bg: #343a40;
+$popover-bg: #bebebe;
+$popover-body-color: #343a40;
 
 @import '~bootstrap/scss/bootstrap';
 @import '../node_modules/animate.css';
