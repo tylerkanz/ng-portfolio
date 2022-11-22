@@ -9,3 +9,56 @@ $popover-body-color: #343a40;
 
 @import '~bootstrap/scss/bootstrap';
 @import '../node_modules/animate.css';
+
+.full-height-container {
+    min-height: calc(100vh - 73px);
+    display: flex;
+    flex-direction: column;
+}
+
+.text-tertiary {
+    color: #999999;
+}
+
+.hero-md {
+    flex: 1;
+    background-repeat: no-repeat;
+    background: rgb(25, 25, 25);
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+.logo-bunch, .logo-bunch-two {
+    height: 75px
+}
+
+.logo-bunch img {
+    height: 40px;
+    filter: brightness(0) invert(1);
+    max-width: 50px;
+}
+
+.logo-bunch-two img {
+    height: 40px;
+    filter: brightness(0) invert(1);
+    margin-right: 1rem;
+    margin-left: 1rem;
+    max-width: 50px;
+}
+
+.logo-bunch-group {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.logo-bunch-group:hover {
+    transform: scale(1.1);
+}
+
+.hero-text h1 {
+    font-size: 7vh;
+}
+
+.cursor {
+    cursor: pointer;
+}

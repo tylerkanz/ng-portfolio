@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'web-apps',
   templateUrl: './web-apps.component.html',
-  styleUrls: ['./web-apps.component.scss']
+  styleUrls: ['./web-apps.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class WebAppsComponent implements OnInit {
 
@@ -11,5 +12,7 @@ export class WebAppsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
 
 }
