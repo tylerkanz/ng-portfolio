@@ -1,27 +1,40 @@
 <div class="full-height-container">
-<div class="hero-md d-flex align-items-center">
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col-lg-6 text-center hero-text animate__animated animate__fadeIn">
-                <h1>Cloud Architecture</h1>
-                <h2>&</h2>
-                <h1>Optimized Workflow</h1>
-                <h2 class="mt-4">for seamless integration and updates.</h2>
-            </div>
-            <div class="col-lg-6">
-                <img class="animate__animated animate__fadeInDown w-100" src="assets/image/system-arch-graphic.png">
+    <div class="hero-md d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 text-center hero-text animate__animated animate__fadeIn">
+                    <h1>Cloud Architecture</h1>
+                    <h2>&</h2>
+                    <h1>Optimized Workflow</h1>
+                    <h2 class="mt-4">for seamless integration and updates.</h2>
+                </div>
+                <div class="col-lg-6">
+                    <img class="animate__animated animate__fadeInDown w-100" src="assets/image/system-arch-graphic.png">
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="logo-bunch-two d-flex align-items-center justify-content-center">
-    <a href="#"> <img placement="bottom" ngbTooltip="AWS" class="grow animate__animated animate__fadeInDown animate__delay-2s icon-1"
-        src="assets/svg/aws.svg"></a>
-    <img placement="bottom" ngbTooltip="Node.js"
-        class="grow animate__animated animate__fadeInDown animate__delay-2s icon-2" src="assets/svg/nodejs.svg">
-    <img placement="bottom" ngbTooltip="NGINX"
-        class="grow animate__animated animate__fadeInDown animate__delay-2s icon-3" src="assets/svg/nginx.svg">
-    <img placement="bottom" ngbTooltip="Apache"
-        class="grow animate__animated animate__fadeInDown animate__delay-2s icon-4" src="assets/svg/apache.svg">
-</div>
+    <div class="logo-bunch-two d-flex align-items-center justify-content-center">
+        <div class="logo-bunch-group" placement="top"
+            ngbPopover="Great customizable CSS frameworks to create sleek user interface and experience."
+            popoverTitle="Amazon Web Services" [openDelay]="200">
+            <img class="grow animate__animated animate__fadeIn animate__delay-2s icon-1" src="assets/svg/aws.svg">
+        </div>
+        <div class="logo-bunch-group" placement="top"
+            ngbPopover="Great customizable CSS frameworks to create sleek user interface and experience."
+            popoverTitle="Node.js" [openDelay]="200">
+            <img class="grow animate__animated animate__fadeIn animate__delay-2s icon-2" src="assets/svg/nodejs.svg">
+        </div>
+        <div class="logo-bunch-group" placement="top"
+            ngbPopover="Great customizable CSS frameworks to create sleek user interface and experience."
+            popoverTitle="Git" [openDelay]="200">
+            <img class="grow animate__animated animate__fadeIn animate__delay-2s icon-3" src="assets/svg/github.svg">
+        </div>
+        <div class="logo-bunch-group" placement="top"
+            ngbPopover="Great customizable CSS frameworks to create sleek user interface and experience."
+            popoverTitle="NGINX and Apache" [openDelay]="200">
+            <img class="animate__animated animate__fadeIn animate__delay-2s icon-4" src="assets/svg/nginx.svg">
+            <img class="animate__animated animate__fadeIn animate__delay-2s icon-5" src="assets/svg/apache.svg">
+        </div>
+    </div>
 </div>

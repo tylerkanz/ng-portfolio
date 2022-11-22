@@ -10,7 +10,7 @@ import { fader, slideInAnimation } from './utils/route-animations';
 })
 export class AppComponent {
   title = 'ng-portfolio';
-
+  isMenuCollapsed = true;
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']
   }

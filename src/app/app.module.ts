@@ -7,13 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { NgIconsModule } from '@ng-icons/core';
 import { typSocialGithub, typSocialLinkedin } from '@ng-icons/typicons'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { WebAppsComponent } from './skills/web-apps/web-apps.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    WebAppsComponent
   ],
   imports: [
     BrowserModule,

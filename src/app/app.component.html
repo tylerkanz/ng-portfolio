@@ -6,12 +6,8 @@
         <h1 class="mx-3 text-tertiary"> + </h1>
         <img class="nav-image" src="assets/svg/angular.svg">
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse justify-content-end navbar-collapse" id="navbarSupportedContent">
+      <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+      <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav align-items-center mr-auto">
           <div class="d-flex">
             <li>
