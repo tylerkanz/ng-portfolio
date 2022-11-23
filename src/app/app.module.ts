@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { NgIconsModule } from '@ng-icons/core';
-import { typSocialGithub, typSocialLinkedin } from '@ng-icons/typicons'
+import { typSocialGithub, typSocialLinkedin, typDatabase } from '@ng-icons/typicons'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
-    NgIconsModule.withIcons({ typSocialGithub,typSocialLinkedin }),
+    NgIconsModule.withIcons({ typSocialGithub,typSocialLinkedin, typDatabase }),
   ],
   providers: [],
   bootstrap: [AppComponent]

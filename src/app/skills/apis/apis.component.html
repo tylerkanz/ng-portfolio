@@ -2,25 +2,31 @@
     <div class="hero-md d-flex align-items-center">
         <div class="container">
             <div class="row d-flex align-items-center">
-                <div class="col-lg-7 hero-text animate__animated animate__fadeIn">
+                <div class="col-lg-7 hero-text text-lg-start my-4 text-center animate__animated animate__fadeIn">
                     <h1>APIs</h1>
                     <h2>Fast and efficient data interfaces for UI.</h2>
                 </div>
-                <div class="col-lg-4">
-                    <img class="animate__animated animate__fadeInDown w-100" src="assets/image/apis-graphic.png">
+                <div class="col-lg-4 p-4">
+                    <img class="animate__animated animate__fadeInDown mb-4 w-100" src="assets/image/apis-graphic.png">
                 </div>
             </div>
         </div>
     </div>
     <div class="logo-bunch-two d-flex align-items-center justify-content-center">
-        <a href="#"><img placement="bottom" ngbTooltip="NativeScript"
-                class="grow animate__animated animate__fadeIn animate__delay-2s icon-1"
-                src="assets/svg/nativescript.svg">
-            <img placement="bottom" ngbTooltip="React"
-                class="grow animate__animated animate__fadeIn animate__delay-2s icon-2" src="assets/svg/react.svg"></a>
-        <img placement="bottom" ngbTooltip="iOS" class="grow animate__animated animate__fadeIn animate__delay-2s icon-4"
-            src="assets/svg/apple.svg">
-        <img placement="bottom" ngbTooltip="Android"
-            class="grow animate__animated animate__fadeIn animate__delay-2s icon-5" src="assets/svg/android.svg">
+        <div class="logo-bunch-group" placement="top"
+            ngbPopover="Great customizable CSS frameworks to create sleek user interface and experience."
+            popoverTitle="Nativescript & ReactNative" [openDelay]="200">
+            <img class="animate__animated animate__fadeIn animate__delay-2s icon-1" src="assets/svg/nodejs.svg">
+        </div>
+        <div class="logo-bunch-group" placement="top"
+            ngbPopover="Great customizable CSS frameworks to create sleek user interface and experience."
+            popoverTitle="iOS & Android" [openDelay]="200">
+            <img class="animate__animated animate__fadeIn animate__delay-2s icon-2" src="assets/svg/wordpress.svg">
+        </div>
+        <div class="logo-bunch-group" placement="top"
+            ngbPopover="Great customizable CSS frameworks to create sleek user interface and experience."
+            popoverTitle="iOS & Android" [openDelay]="200">
+            <ng-icon class="animate__animated animate__fadeIn animate__delay-2s icon-3" size="45px" name="typDatabase"></ng-icon>
+        </div>
     </div>
 </div>
