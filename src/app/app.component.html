@@ -1,14 +1,26 @@
 <div class="content">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+    <div class="container justify-content-start">
+      <button class="navbar-toggler me-4" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
       <div class="d-flex align-items-center cursor" [routerLink]="['/']">
         <img class="nav-tk" src="assets/svg/tk.svg">
         <h1 class="mx-3 text-tertiary"> + </h1>
         <img class="nav-image" src="assets/svg/angular.svg">
       </div>
-      <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+
+      <div class="d-lg-none d-flex ms-auto">
+        <a class="nav-link p-1" target="_blank" href="https://github.com/tylerkanz">
+          <ng-icon size="30px" name="typSocialGithub"></ng-icon>
+        </a>
+        <a class="nav-link p-1" target="_blank" href="https://www.linkedin.com/in/tylerkanz/">
+          <ng-icon size="30px" name="typSocialLinkedin"></ng-icon>
+        </a>
+      </div>
+
       <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav align-items-center mr-auto">
+
+        <!-- Web Menu -->
+        <ul class="navbar-nav d-none d-lg-flex align-items-center mr-auto">
           <div class="d-flex">
             <li>
               <a class="nav-link p-1" target="_blank" href="https://github.com/tylerkanz">
@@ -32,6 +44,23 @@
               <button ngbDropdownItem [routerLink]="['/skills/cloud-architecture']">Cloud Architecture</button>
             </div>
           </div>
+        </ul>
+
+        <!-- Mobile Menu -->
+        <ul class="navbar-nav d-flex d-lg-none">
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/skills/web-apps']" (click)="isMenuCollapsed = true">Web Apps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/skills/mobile-apps']" (click)="isMenuCollapsed = true">Mobile Apps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/skills/apis']" (click)="isMenuCollapsed = true">APIs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/skills/cloud-architecture']" (click)="isMenuCollapsed = true">Cloud
+              Architecture</a>
+          </li>
         </ul>
       </div>
     </div>
