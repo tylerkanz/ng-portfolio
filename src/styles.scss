@@ -63,3 +63,21 @@ $navbar-toggler-focus-width: 0;
 .cursor {
     cursor: pointer;
 }
+
+.side-showcase {
+    position: relative;
+    right: 100px;
+    width: 65px;
+}
+
+.side-showcase img {
+    filter: brightness(0) invert(1) contrast(0.5);
+    margin: 1rem 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .side-showcase {
+      position: unset;
+      margin-right: 10px;
+    }
+  }
