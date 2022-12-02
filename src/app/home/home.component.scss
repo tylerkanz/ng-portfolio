@@ -2,6 +2,7 @@
     width: 100%;
     height: 650px;
     background-image: url('/assets/image/hero-background.png');
+    background-position: center;
 }
 
 .logo-bunch img {
@@ -12,7 +13,6 @@
 }
 
 /** BLINKING LINE **/
-
 .box::after {
     content: "";
     width: 3px;
@@ -35,46 +35,138 @@
   }
 
 .box::after {
-    /*code commented for brevity*/
     animation: cursor-blink 1.5s steps(2) infinite;
 }
 
-
-
-
-.animate__animated.icon-1 {
-    --animate-delay: .1s;
-}
-.animate__animated.icon-2 {
-    --animate-delay: .2s;
+.neon-tube {
+    height: 650px;
+    animation: flicker 7s linear infinite;
+    filter: invert(.7) drop-shadow(0px 0px 8px #00e613);
 }
 
-.animate__animated.icon-3 {
-    --animate-delay: .3s;
-}
-
-.animate__animated.icon-4 {
-    --animate-delay: .4s;
-}
-
-.animate__animated.icon-5 {
-    --animate-delay: .5s;
-}
-
-.animate__animated.icon-6 {
-    --animate-delay: .6s;
-}
-
-.animate__animated.icon-7 {
-    --animate-delay: .7s;
-}
-
-.animate__animated.icon-8 {
-    --animate-delay: .8s;
-}
-.animate__animated.icon-9 {
-    --animate-delay: .9s;
-}
-.animate__animated.icon-10 {
-    --animate-delay: 1s;
-}
+@keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: .9;
+    }
+  
+    6% {
+      opacity: .85;
+    }
+  
+    8% {
+      opacity: .95;
+    }
+  
+    10% {
+      opacity: .90;
+    }
+  
+    11% {
+      opacity: .922;
+    }
+  
+    12% {
+      opacity: .9;
+    }
+  
+    14% {
+      opacity: .95;
+    }
+  
+    16% {
+      opacity: .98;
+    }
+  
+    17% {
+      opacity: .9;
+    }
+  
+    19% {
+      opacity: .93;
+    }
+  
+    20% {
+      opacity: .99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: .94;
+    }
+  
+    28% {
+      opacity: .98;
+    }
+  
+    37% {
+      opacity: .93;
+    }
+  
+    38% {
+      opacity: .5;
+    }
+  
+    39% {
+      opacity: .96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: .97;
+    }
+  
+    46% {
+      opacity: .94;
+    }
+  
+    56% {
+      opacity: .9;
+    }
+  
+    58% {
+      opacity: .9;
+    }
+  
+    60% {
+      opacity: .99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: .9;
+    }
+  
+    72% {
+      opacity: .95;
+    }
+  
+    93% {
+      opacity: .93;
+    }
+  
+    95% {
+      opacity: .95;
+    }
+  
+    97% {
+      opacity: .93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
