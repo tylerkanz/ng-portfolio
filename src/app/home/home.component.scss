@@ -1,6 +1,6 @@
 .hero-container {
     width: 100%;
-    height: 650px;
+    height: 78vh;
     background-image: url('/assets/image/hero-background.png');
     background-position: center;
 }
@@ -39,9 +39,18 @@
 }
 
 .neon-tube {
-    height: 650px;
+    height: 78vh;
     animation: flicker 7s linear infinite;
     filter: invert(.7) drop-shadow(0px 0px 8px #00e613);
+}
+
+.portfolio-carousel {
+    height: 14vh
+}
+
+.portfolio-carousel img {
+    max-height: 100px;
+    max-width: 20%;
 }
 
 @keyframes flicker {

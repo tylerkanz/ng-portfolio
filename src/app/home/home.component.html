@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="position-relative d-lg-block d-none ms-auto">
-            <img class="neon-tube" style="height: 650px" src="assets/svg/neon-tubes.svg">
+            <img class="neon-tube" style="height: 78vh" src="assets/svg/neon-tubes.svg">
         </div>
     </div>
 </div>
@@ -54,21 +54,23 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-            <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+        <div class="col-lg-12 portfolio-carousel d-flex align-items-center">
+            <ngb-carousel style="width: 100%" [interval]="4000" [showNavigationArrows]="false" [showNavigationIndicators]="false">
                 <ng-template ngbSlide>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="card bg-dark">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk of the card's content.</p>
-                                    <button type="button" class="btn btn-primary">Button</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="d-flex justify-content-between">
+                        <img src="assets/image/portfolio/esentry.png">
+                        <img src="assets/image/portfolio/iriss.png">
+                        <img src="assets/image/portfolio/smart-training.png">
+                        <img src="assets/image/portfolio/154-marine.png">
+                        <img src="assets/image/portfolio/cassanos.png">
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="d-flex justify-content-between">
+                        <img src="assets/image/portfolio/bleigh.png">
+                        <img src="assets/image/portfolio/beth-haven.png">
+                        <img src="assets/image/portfolio/carthage-system.png">
+                        <img src="assets/image/portfolio/big-river.png">
                     </div>
                 </ng-template>
             </ngb-carousel>
