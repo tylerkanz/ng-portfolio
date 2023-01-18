@@ -126,3 +126,13 @@ hr.rounded {
     opacity: 0.9;
     border-radius: 5px;
 }
+
+@include media-breakpoint-down(sm) {
+    .box {
+        font-size: 2rem !important;
+    }
+
+    .box::after {
+        height: 50px !important;
+    }
+}
