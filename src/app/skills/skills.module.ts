@@ -8,7 +8,7 @@ import { SkillsComponent } from './skills.component';
 import { MobileAppsComponent } from './mobile-apps/mobile-apps.component';
 import { WebAppsComponent } from './web-apps/web-apps.component';
 import { CloudArchComponent } from './cloud-arch/cloud-arch.component';
-import { ApisComponent } from './apis/apis.component';
+import { BackEndComponent } from './back-end/back-end.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { ApisComponent } from './apis/apis.component';
     MobileAppsComponent,
     WebAppsComponent,
     CloudArchComponent,
-    ApisComponent
+    BackEndComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +30,7 @@ import { ApisComponent } from './apis/apis.component';
     MobileAppsComponent,
     WebAppsComponent,
     CloudArchComponent,
-    ApisComponent
+    BackEndComponent
   ]
 })
 export class SkillsModule { }

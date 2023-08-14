@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApisComponent } from './apis/apis.component';
 import { MobileAppsComponent } from './mobile-apps/mobile-apps.component';
 import { SkillsComponent } from './skills.component';
 import { CloudArchComponent } from './cloud-arch/cloud-arch.component';
 import { WebAppsComponent } from './web-apps/web-apps.component';
+import { BackEndComponent } from './back-end/back-end.component';
 
 const routes: Routes = [
   {
@@ -32,8 +32,8 @@ const routes: Routes = [
     data: { animation: 'Right'}
   },
   {
-    path: 'apis',
-    component: ApisComponent,
+    path: 'back-end-development',
+    component: BackEndComponent,
     pathMatch: 'full',
     data: { animation: 'Right'}
   },
