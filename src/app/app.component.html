@@ -4,8 +4,6 @@
       <button class="navbar-toggler me-4" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
       <div class="d-flex align-items-center cursor" [routerLink]="['/']">
         <img class="nav-tk" src="assets/svg/tk.svg" alt="TK">
-        <h1 class="mx-3 text-tertiary"> + </h1>
-        <img class="nav-image" src="assets/svg/angular.svg" alt="Angular">
       </div>
 
       <div class="d-lg-none d-flex ms-auto">
@@ -40,7 +38,7 @@
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu-dark">
               <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'web-apps'">Web Apps</button>
               <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'mobile-apps'">Mobile Apps</button>
-              <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'apis'">APIs</button>
+              <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'back-end-development'">Back-End Development</button>
               <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'cloud-architecture'">Cloud Architecture</button>
             </div>
           </div>
@@ -58,7 +56,7 @@
             <a class="nav-link" [routerLink]="['/skills']" [fragment]="'mobile-apps'" (click)="isMenuCollapsed = true">Mobile Apps</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/skills']" [fragment]="'apis'" (click)="isMenuCollapsed = true">APIs</a>
+            <a class="nav-link" [routerLink]="['/skills']" [fragment]="'back-end-development'" (click)="isMenuCollapsed = true">Back-End Development</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/skills']" [fragment]="'cloud-architecture'" (click)="isMenuCollapsed = true">Cloud

@@ -60,7 +60,7 @@ export const SKILL_AREAS: SkillArea[] = [
     slug: 'mobile-apps',
     title: 'Mobile Applications',
     description:
-      "Cross-platform mobile apps that feel native — TypeScript, NativeScript, and React Native. Same approach as the web work: the interface should never get in the user's way.",
+      "Cross-platform mobile apps that feel native — TypeScript, NativeScript, React Native, and Flutter. Same approach as the web work: the interface should never get in the user's way.",
     heroImage: 'assets/image/mobile-apps-graphic.png',
     sideShowcase: [
       { src: 'assets/svg/javascript.svg', label: 'JavaScript', rounded: true },
@@ -75,6 +75,11 @@ export const SKILL_AREAS: SkillArea[] = [
         icons: ['assets/svg/nativescript.svg', 'assets/svg/react.svg'],
       },
       {
+        title: 'Flutter',
+        description: "A third option when native performance matters less than shipping one UI everywhere.",
+        icons: ['assets/svg/flutter.svg'],
+      },
+      {
         title: 'iOS & Android',
         description: 'Built and maintained for both, kept current with the latest OS releases.',
         icons: ['assets/svg/apple.svg', 'assets/svg/android.svg'],
@@ -82,14 +87,15 @@ export const SKILL_AREAS: SkillArea[] = [
     ],
   },
   {
-    slug: 'apis',
-    title: 'Application Programming Interfaces',
+    slug: 'back-end-development',
+    title: 'Back-End Development',
     description:
-      'REST APIs that are easy to read, easy to extend, and hard to misuse — built with PHP, JavaScript, and TypeScript, on standards like OAuth and JSON that other tools already expect.',
+      "Server-side systems built with Node.js, AWS Amplify, WordPress's REST API, and ASP.NET — whatever the stack calls for, from a single endpoint to a full application backend.",
     heroImage: 'assets/image/apis-graphic.png',
     sideShowcase: [
       { src: 'assets/svg/javascript.svg', label: 'JavaScript', rounded: true },
       { src: 'assets/svg/typescript.svg', label: 'TypeScript' },
+      { src: 'assets/svg/graphql.svg', label: 'GraphQL' },
       { src: 'assets/svg/php.svg', label: 'PHP' },
       { src: 'assets/svg/python.svg', label: 'Python' },
     ],
@@ -98,6 +104,11 @@ export const SKILL_AREAS: SkillArea[] = [
         title: 'Node.js & Express.js',
         description: 'My default pairing for a fast, unopinionated backend.',
         icons: ['assets/svg/nodejs.svg'],
+      },
+      {
+        title: 'AWS Amplify',
+        description: 'Cloud services wired up fast, without hand-rolling the infrastructure around it.',
+        icons: ['assets/svg/amplify.svg'],
       },
       {
         title: 'WordPress',
