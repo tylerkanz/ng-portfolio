@@ -1,0 +1,80 @@
+<!-- BEGIN HERO SECTION -->
+
+<div class="d-flex hero-container">
+    <div class="container justify-content-lg-start justify-content-center d-flex">
+        <div class="row align-items-center">
+            <div class="text-lg-start text-center fade-in col-lg-12 text-light hero-text">
+                <h1 class="h1">Tyler Kanz,</h1>
+                <h1 class="box">Software Engineer.</h1>
+                <div class="logo-bunch d-lg-flex">
+                    <div class="mt-4">
+                        <img placement="bottom" ngbTooltip="Angular"
+                            class="me-3 fade-in-down icon-1"
+                            src="assets/svg/angular.svg" alt="Angular">
+                        <img placement="bottom" ngbTooltip="React"
+                            class="mx-3 fade-in-down icon-2"
+                            src="assets/svg/react.svg" alt="React">
+                        <img placement="bottom" ngbTooltip="NativeScript"
+                            class="mx-3 fade-in-down icon-3"
+                            src="assets/svg/nativescript.svg" alt="NativeScript">
+                        <img placement="bottom" ngbTooltip="Wordpress"
+                            class="mx-3 fade-in-down icon-4"
+                            src="assets/svg/wordpress.svg" alt="Wordpress">
+                        <img placement="bottom" ngbTooltip="Bootstrap 5"
+                            class="mx-3 fade-in-down icon-5"
+                            src="assets/svg/bootstrap.svg" alt="Bootstrap">
+                    </div>
+                    <div class="mt-4">
+                        <img placement="bottom" ngbTooltip="Tailwind"
+                            class="mx-3 fade-in-down icon-6"
+                            src="assets/svg/tailwind.svg" alt="Tailwind">
+                        <img placement="bottom" ngbTooltip="AWS"
+                            class="mx-3 fade-in-down icon-7"
+                            src="assets/svg/aws.svg" alt="AWS">
+                        <img placement="bottom" ngbTooltip="Node.js"
+                            class="mx-3 fade-in-down icon-8"
+                            src="assets/svg/nodejs.svg" alt="Node.js">
+                        <img placement="bottom" ngbTooltip="NGINX"
+                            class="mx-3 fade-in-down icon-9"
+                            src="assets/svg/nginx.svg" alt="NGINX">
+                        <img placement="bottom" ngbTooltip="Apache"
+                            class="ms-3 fade-in-down icon-10"
+                            src="assets/svg/apache.svg" alt="Apache">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="position-relative d-lg-block d-none ms-auto">
+            <img class="neon-tube" style="height: 78vh" src="assets/svg/neon-tubes.svg" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- END HERO SECTION -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 portfolio-carousel d-flex align-items-center">
+            <ngb-carousel style="width: 100%" [interval]="4000" [showNavigationArrows]="false" [showNavigationIndicators]="false">
+                <ng-template ngbSlide>
+                    <div class="d-flex justify-content-between">
+                        <img src="assets/image/portfolio/esentry.png" alt="eSentry portfolio project">
+                        <img src="assets/image/portfolio/iriss.png" alt="IRISS portfolio project">
+                        <img src="assets/image/portfolio/smart-training.png" alt="Smart Training portfolio project">
+                        <img src="assets/image/portfolio/154-marine.png" alt="154 Marine portfolio project">
+                        <img src="assets/image/portfolio/cassanos.png" alt="Cassano's portfolio project">
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="d-flex justify-content-between">
+                        <img src="assets/image/portfolio/bleigh.png" alt="Bleigh portfolio project">
+                        <img src="assets/image/portfolio/beth-haven.png" alt="Beth Haven portfolio project">
+                        <img src="assets/image/portfolio/carthage-system.png" alt="Carthage System portfolio project">
+                        <img src="assets/image/portfolio/big-river.png" alt="Big River portfolio project">
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+
+</div>

@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { fader, slideInAnimation } from './utils/route-animations';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { NgbCollapseModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterLink, RouterOutlet, NgbCollapseModule, NgbDropdownModule, FaIconComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [ slideInAnimation ]
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'ng-portfolio';
+  faGithub = faGithub;
+  faLinkedin = faLinkedin;
   isMenuCollapsed = true;
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']
-  }
 }

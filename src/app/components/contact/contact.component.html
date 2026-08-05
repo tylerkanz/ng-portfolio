@@ -1,0 +1,106 @@
+<section class="full-height-container">
+  <div class="hero-md d-flex align-items-center">
+    <div class="container" style="z-index: 1">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 hero-text text-lg-start my-4 text-center fade-in">
+          <h1 class="mb-4">Get in touch.</h1>
+          <p>Got a project, a role, or just want to talk shop? Send a message and I'll get back to you soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <div class="contact-card p-4 p-md-5">
+          <form (ngSubmit)="send()" #contactForm="ngForm">
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
+                <label class="form-label" for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your name"
+                  [(ngModel)]="form.name" name="name" required>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="your@email.com"
+                  [(ngModel)]="form.email" name="email" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="subject">Subject</label>
+              <select class="form-select" id="subject" [(ngModel)]="form.subject" name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option *ngFor="let s of subjects" [value]="s">{{ s }}</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-control" id="message" rows="6"
+                placeholder="Tell me a bit about what you have in mind..."
+                [(ngModel)]="form.message" name="message" required></textarea>
+            </div>
+
+            <!-- Honeypot: hidden from real users via CSS, left blank by them.
+                 Bots that auto-fill forms tend to fill it in. -->
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off"
+                [(ngModel)]="form.website">
+            </div>
+
+            <div class="mb-3" *ngIf="turnstileSiteKey">
+              <div class="cf-turnstile" [attr.data-sitekey]="turnstileSiteKey" #turnstileWidget></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
+              Send Message
+            </button>
+
+            <div *ngIf="submitted" class="alert alert-success mt-3 mb-0">
+              Got it. I'll get back to you soon.
+            </div>
+
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3 mb-0">
+              {{ errorMessage }}
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="info-block">
+          <div class="info-icon-wrap">
+            <fa-icon [icon]="faAt"></fa-icon>
+          </div>
+          <div>
+            <h4 class="info-title">Direct Inquiries</h4>
+            <p class="info-detail">tylerkanz&#64;gmail.com</p>
+          </div>
+        </div>
+
+        <div class="info-block mt-4">
+          <div class="info-icon-wrap">
+            <fa-icon [icon]="faGithub"></fa-icon>
+          </div>
+          <div>
+            <h4 class="info-title">GitHub</h4>
+            <a class="info-detail" target="_blank" href="https://github.com/tylerkanz">github.com/tylerkanz</a>
+          </div>
+        </div>
+
+        <div class="info-block mt-4">
+          <div class="info-icon-wrap">
+            <fa-icon [icon]="faLinkedin"></fa-icon>
+          </div>
+          <div>
+            <h4 class="info-title">LinkedIn</h4>
+            <a class="info-detail" target="_blank" href="https://www.linkedin.com/in/tylerkanz/">linkedin.com/in/tylerkanz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

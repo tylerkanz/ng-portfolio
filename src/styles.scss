@@ -2,14 +2,26 @@
 
 /* Importing Bootstrap SCSS file. */
 $primary: #9b9d9e;
+$body-bg: #212529;
 $body-color: #c9c9c9;
 $popover-header-bg: #343a40;
 $popover-bg: #bebebe;
 $popover-body-color: #343a40;
 $navbar-toggler-focus-width: 0;
+$font-family-sans-serif: 'Manrope', system-ui, -apple-system, sans-serif;
+$headings-font-family: 'JetBrains Mono', 'Manrope', monospace;
+
+// Form controls inherit $body-bg/$body-color (both dark-themed above), but the
+// select caret and input border don't — they default to fixed light-mode colors
+// that are invisible against a dark background, so they need explicit overrides.
+$input-border-color: rgba(255, 255, 255, 0.15);
+$form-select-indicator-color: $body-color;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "../node_modules/animate.css";
+
+:root {
+    --accent-neon: #39ff8f;
+}
 
 .full-height-container {
     min-height: calc(100vh - 73px);
@@ -54,6 +66,7 @@ $navbar-toggler-focus-width: 0;
 
 .logo-bunch-group:hover {
     transform: scale(1.1);
+    filter: drop-shadow(0 0 6px var(--accent-neon));
 }
 
 .hero-text h1 {
@@ -84,41 +97,71 @@ $navbar-toggler-focus-width: 0;
     }
 }
 
-.animate__animated.icon-1 {
-    --animate-delay: 0.1s;
-}
-.animate__animated.icon-2 {
-    --animate-delay: 0.2s;
-}
-
-.animate__animated.icon-3 {
-    --animate-delay: 0.3s;
+/** Lightweight stagger-fade utilities (replaces animate.css) **/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.animate__animated.icon-4 {
-    --animate-delay: 0.4s;
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: none; }
 }
 
-.animate__animated.icon-5 {
-    --animate-delay: 0.5s;
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: none; }
 }
 
-.animate__animated.icon-6 {
-    --animate-delay: 0.6s;
+.fade-in,
+.fade-in-down,
+.fade-in-right {
+    opacity: 0;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: var(--stagger-delay, 0s);
 }
 
-.animate__animated.icon-7 {
-    --animate-delay: 0.7s;
+.fade-in { animation-name: fadeIn; }
+.fade-in-down { animation-name: fadeInDown; }
+.fade-in-right { animation-name: fadeInRight; }
+
+.icon-1 {
+    --stagger-delay: 2.1s;
+}
+.icon-2 {
+    --stagger-delay: 2.2s;
 }
 
-.animate__animated.icon-8 {
-    --animate-delay: 0.8s;
+.icon-3 {
+    --stagger-delay: 2.3s;
 }
-.animate__animated.icon-9 {
-    --animate-delay: 0.9s;
+
+.icon-4 {
+    --stagger-delay: 2.4s;
 }
-.animate__animated.icon-10 {
-    --animate-delay: 1s;
+
+.icon-5 {
+    --stagger-delay: 2.5s;
+}
+
+.icon-6 {
+    --stagger-delay: 2.6s;
+}
+
+.icon-7 {
+    --stagger-delay: 2.7s;
+}
+
+.icon-8 {
+    --stagger-delay: 2.8s;
+}
+.icon-9 {
+    --stagger-delay: 2.9s;
+}
+.icon-10 {
+    --stagger-delay: 3s;
 }
 
 hr.rounded {

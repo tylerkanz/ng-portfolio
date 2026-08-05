@@ -37,6 +37,10 @@ yarn-error.log
 testem.log
 /typings
 
+# Cloudflare Workers / wrangler
+/.wrangler
+.dev.vars
+
 # System files
 .DS_Store
 Thumbs.db

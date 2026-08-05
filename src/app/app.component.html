@@ -3,17 +3,17 @@
     <div class="container justify-content-start">
       <button class="navbar-toggler me-4" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
       <div class="d-flex align-items-center cursor" [routerLink]="['/']">
-        <img class="nav-tk" src="assets/svg/tk.svg">
+        <img class="nav-tk" src="assets/svg/tk.svg" alt="TK">
         <h1 class="mx-3 text-tertiary"> + </h1>
-        <img class="nav-image" src="assets/svg/angular.svg">
+        <img class="nav-image" src="assets/svg/angular.svg" alt="Angular">
       </div>
 
       <div class="d-lg-none d-flex ms-auto">
         <a class="nav-link p-1" target="_blank" href="https://github.com/tylerkanz">
-          <ng-icon size="30px" name="typSocialGithub"></ng-icon>
+          <fa-icon [icon]="faGithub" size="lg"></fa-icon>
         </a>
         <a class="nav-link p-1" target="_blank" href="https://www.linkedin.com/in/tylerkanz/">
-          <ng-icon size="30px" name="typSocialLinkedin"></ng-icon>
+          <fa-icon [icon]="faLinkedin" size="lg"></fa-icon>
         </a>
       </div>
 
@@ -24,12 +24,12 @@
           <div class="d-flex">
             <li>
               <a class="nav-link p-1" target="_blank" href="https://github.com/tylerkanz">
-                <ng-icon size="30px" name="typSocialGithub"></ng-icon>
+                <fa-icon [icon]="faGithub" size="lg"></fa-icon>
               </a>
             </li>
             <li>
               <a class="nav-link p-1" target="_blank" href="https://www.linkedin.com/in/tylerkanz/">
-                <ng-icon size="30px" name="typSocialLinkedin"></ng-icon>
+                <fa-icon [icon]="faLinkedin" size="lg"></fa-icon>
               </a>
             </li>
           </div>
@@ -38,34 +38,40 @@
               Skills
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu-dark">
-              <button ngbDropdownItem [routerLink]="['/skills/web-apps']">Web Apps</button>
-              <button ngbDropdownItem [routerLink]="['/skills/mobile-apps']">Mobile Apps</button>
-              <button ngbDropdownItem [routerLink]="['/skills/apis']">APIs</button>
-              <button ngbDropdownItem [routerLink]="['/skills/cloud-architecture']">Cloud Architecture</button>
+              <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'web-apps'">Web Apps</button>
+              <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'mobile-apps'">Mobile Apps</button>
+              <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'apis'">APIs</button>
+              <button ngbDropdownItem [routerLink]="['/skills']" [fragment]="'cloud-architecture'">Cloud Architecture</button>
             </div>
           </div>
+          <li class="ms-4">
+            <a class="btn btn-cta" [routerLink]="['/contact']">Contact</a>
+          </li>
         </ul>
 
         <!-- Mobile Menu -->
         <ul class="navbar-nav d-flex d-lg-none">
-          <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/skills/web-apps']" (click)="isMenuCollapsed = true">Web Apps</a>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/skills']" [fragment]="'web-apps'" (click)="isMenuCollapsed = true">Web Apps</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/skills/mobile-apps']" (click)="isMenuCollapsed = true">Mobile Apps</a>
+            <a class="nav-link" [routerLink]="['/skills']" [fragment]="'mobile-apps'" (click)="isMenuCollapsed = true">Mobile Apps</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/skills/apis']" (click)="isMenuCollapsed = true">APIs</a>
+            <a class="nav-link" [routerLink]="['/skills']" [fragment]="'apis'" (click)="isMenuCollapsed = true">APIs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/skills/cloud-architecture']" (click)="isMenuCollapsed = true">Cloud
+            <a class="nav-link" [routerLink]="['/skills']" [fragment]="'cloud-architecture'" (click)="isMenuCollapsed = true">Cloud
               Architecture</a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="btn btn-cta" [routerLink]="['/contact']" (click)="isMenuCollapsed = true">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <main [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet"></router-outlet>
+  <main>
+    <router-outlet></router-outlet>
   </main>
 </div>

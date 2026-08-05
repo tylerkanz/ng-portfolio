@@ -19,3 +19,19 @@
 :host .navbar-toggler {
     border: unset
 }
+
+.btn-cta {
+    background: var(--accent-neon);
+    color: #0b1a10;
+    font-weight: 600;
+    border: none;
+    transition: filter 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+    background: var(--accent-neon);
+    color: #0b1a10;
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}

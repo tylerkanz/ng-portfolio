@@ -1,0 +1,52 @@
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.75rem;
+}
+
+.btn-primary:focus,
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(57, 255, 143, 0.25);
+    border-color: var(--accent-neon);
+}
+
+.info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info-icon-wrap {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--accent-neon);
+}
+
+.info-title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.info-detail {
+    color: var(--bs-body-color);
+    text-decoration: none;
+}
+
+a.info-detail:hover {
+    color: var(--accent-neon);
+}

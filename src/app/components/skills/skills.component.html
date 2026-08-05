@@ -1,0 +1,37 @@
+@for (area of skillAreas; track area.slug) {
+  <section [id]="area.slug" class="full-height-container">
+    <div class="hero-md d-flex align-items-center">
+      <div class="container" style="z-index: 1">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6 hero-text text-lg-start my-4 text-center fade-in">
+            <h1 class="mb-4">{{ area.title }}</h1>
+            <p>{{ area.description }}</p>
+          </div>
+          <div class="col-lg-6 p-4">
+            <img class="fade-in-down w-100 mb-4" [src]="area.heroImage" [alt]="area.title">
+          </div>
+        </div>
+      </div>
+      <div class="side-showcase">
+        @for (icon of area.sideShowcase; track icon.src; let i = $index) {
+          <img [class]="'fade-in-right icon-' + (i + 1)" [class.rounded]="icon.rounded"
+            placement="start" [ngbTooltip]="icon.label" [src]="icon.src" [alt]="icon.label">
+        }
+      </div>
+    </div>
+    <div class="logo-bunch-two d-flex align-items-center justify-content-center flex-wrap">
+      @for (group of area.logoGroups; track group.title; let i = $index) {
+        <div class="logo-bunch-group" [openDelay]="200" placement="top"
+          [ngbPopover]="group.description" [popoverTitle]="group.title">
+          @if (group.faIcon) {
+            <fa-icon [class]="'fade-in icon-' + (i + 1)" size="2x" [icon]="group.faIcon"></fa-icon>
+          } @else {
+            @for (icon of group.icons; track icon) {
+              <img [class]="'fade-in icon-' + (i + 1)" [src]="icon" alt="">
+            }
+          }
+        </div>
+      }
+    </div>
+  </section>
+}
