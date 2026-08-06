@@ -5,5 +5,5 @@
 export const environment = {
   production: false,
   // Public Turnstile site key (not secret). Leave empty to disable the widget.
-  turnstileSiteKey: '',
+  turnstileSiteKey: '0x4AAAAAAEHd2uj5nDD3OQAG',
 };
